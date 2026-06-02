@@ -105,3 +105,42 @@ FirstName_LastName_National_Practical_Exam_2026
 │   └── package.json
 └── README.md
 ```
+
+
++------------------+
+|    Warehouse     |
++------------------+
+| warehouseCode PK |
+| warehouseName    |
+| warehouseLocation|
++------------------+
+         |
+         | 1
+         |
+         | M
++------------------+
+|     Product      |
++------------------+
+| productCode PK   |
+| productName      |
+| category         |
+| quantityInStock  |
+| unitPrice        |
+| supplierName     |
+| dateReceived     |
+| warehouseCode FK |
++------------------+
+         |
+         | 1
+         |
+         | M
++----------------------+
+|  StockTransaction    |
++----------------------+
+| transactionId PK     |
+| transactionDate      |
+| quantityMoved        |
+| transactionType      |
+| productCode FK       |
+| warehouseCode FK     |
++----------------------+
